@@ -3,7 +3,7 @@ import json
 import os
 import argparse
 import tqdm
-
+# python /home/xier2/DejaVu/Decentralized_FM_alpha/convert_opt_checkpoint.py --model-name facebook/opt-350m --save-path /home/xier2/model/pretrained_models
 from transformers import AutoConfig, AutoTokenizer, AutoModelForCausalLM
 
 

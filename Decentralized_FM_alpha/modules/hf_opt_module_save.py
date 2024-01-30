@@ -417,7 +417,8 @@ class GPTBlock(OPTDecoderLayer):
         module.self_attn.layer_index = layer_index
         module.fp_i = 0
         module.fp_mlp_query = np.memmap(
-            f"/lustre/fsw/nvresearch/ldm/diffusion/data/175b_c4/mlp_sp_x_{module.layer_index}.mmap",
+            # f"/lustre/fsw/nvresearch/ldm/diffusion/data/175b_c4/mlp_sp_x_{module.layer_index}.mmap",
+            f"/home/xier2/model/data/350m_c4/mlp_sp_x_{module.layer_index}.mmap",
             dtype="float16",
             mode="w+",
             shape=(
@@ -426,7 +427,7 @@ class GPTBlock(OPTDecoderLayer):
             ),
         )
         module.fp_att_query = np.memmap(
-            f"/lustre/fsw/nvresearch/ldm/diffusion/data/175b_c4/att_sp_x_{module.layer_index}.mmap",
+            f"/home/xier2/model/data/3b_c4/att_sp_x_{module.layer_index}.mmap",
             dtype="float16",
             mode="w+",
             shape=(
@@ -435,7 +436,7 @@ class GPTBlock(OPTDecoderLayer):
             ),
         )
         module.fp_label = np.memmap(
-            f"/lustre/fsw/nvresearch/ldm/diffusion/visualization/175b/mlp_label_{module.layer_index}.mmap",
+            f"/home/xier2/model/visualization/3b/mlp_label_{module.layer_index}.mmap",
             dtype="float16",
             mode="w+",
             shape=(
@@ -445,7 +446,7 @@ class GPTBlock(OPTDecoderLayer):
         )
         module.self_attn.fp_i = 0
         module.self_attn.fp_label = np.memmap(
-            f"/lustre/fsw/nvresearch/ldm/diffusion/visualization/175b/score_norm_{module.layer_index}.mmap",
+            f"/home/xier2/model/visualization/3b/score_norm_{module.layer_index}.mmap",
             dtype="float16",
             mode="w+",
             shape=(

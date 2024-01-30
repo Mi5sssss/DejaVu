@@ -1,0 +1,28 @@
+start running ./c4_train/c4_train.jsonl
+Initialize NCCLCommunicator: < pipeline_group_0 >; rank: 1
+<get_request_processor>: None
+<RequestProcessor> dir: ./c4_train
+<RequestProcessor> file: c4_train.jsonl
+<RequestProcessor>, output file: ./c4_train/output_c4_train.jsonl
+input seq length: 2048
+=======Initialize Dist Inference(Sync).=======
+=======Gpipe use FP16=======
+loading layer 12
+loading layer 13
+loading layer 14
+loading layer 15
+loading layer 16
+loading layer 17
+loading layer 18
+loading layer 19
+loading layer 20
+loading layer 21
+loading layer 22
+loading layer 23
+temperature is 0, should be deterministic (greedy).
+temperature is 0, should be deterministic (greedy).
+<inference_batch> rank-<1> Enter!
+<inference_batch> rank-<1> after first barrier!
+<inference_batch> rank-<1> after first _init_cached_seqs_and_attentions!
+<inference_batch> rank-<1> after second barrier!
+<inference_batch> rank-<1> enter computation!
